@@ -1,5 +1,7 @@
 package br.com.alura.screenmatch.models;
 
+import jakarta.persistence.Entity;
+
 import java.time.LocalDate;
 import java.time.format.DateTimeParseException;
 
