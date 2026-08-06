@@ -17,7 +17,6 @@ public class ScreenmatchApplication  implements CommandLineRunner {
 	// Se torna o método main já que vai ser chamado na linha 11 como define o contrato da interface CommandLineRunner
 	@Override
 	public void run(String... args) throws Exception {
-
 		Principal principal = new Principal();
 		principal.exibeMenu();
 
