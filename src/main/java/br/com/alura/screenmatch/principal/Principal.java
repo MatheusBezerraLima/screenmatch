@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 public class Principal {
     private Scanner leitura = new Scanner(System.in);
     private final String BASE_URL = "https://www.omdbapi.com/?t=";
-    private final String API_KEY = "&apiKey=cf87569f";
+    private final String API_KEY = System.getenv("OMDB_API_KEY");
     private  ConsumoAPI consumoAPI = new ConsumoAPI();
     private ConverteDados conversor = new ConverteDados();
     private List<DadosSerie> dadosSeries = new ArrayList<>();
