@@ -2,12 +2,9 @@ package br.com.alura.screenmatch.principal;
 
 import br.com.alura.screenmatch.models.*;
 import br.com.alura.screenmatch.repositories.SerieRepository;
-import br.com.alura.screenmatch.services.ConsumoAPI;
-import br.com.alura.screenmatch.services.ConverteDados;
-import org.springframework.beans.factory.annotation.Autowired;
+import br.com.alura.screenmatch.service.ConsumoAPI;
+import br.com.alura.screenmatch.service.ConverteDados;
 
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
 
@@ -234,7 +231,7 @@ public class Principal {
         buscarSeriePorTitulo();
         if(serieBuscada.isPresent()){
             Serie serie = serieBuscada.get();
-            System.out.println("Digite a partir de que ano foi o lançamento: ");
+            System.out.println("Digite a partir de que ano foi o  lançamento: ");
             var anoLancamento = leitura.nextInt();
 
             List<Episodio> episodiosEncontrados = repositorio.episodioPorSerieEAno(serie, anoLancamento);
